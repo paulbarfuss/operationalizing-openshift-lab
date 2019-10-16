@@ -16,3 +16,7 @@ machineset_custom_groups:
       instanceType: m5.4xlarge
 
 scheduler_default_node_selector: node-role.kubernetes.io/compute=
+cluster_autoscaler_cores_min: 16
+cluster_autoscaler_cores_max: 256
+cluster_autoscaler_memory_min: 8
+cluster_autoscaler_memory_max: 512

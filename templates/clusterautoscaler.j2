@@ -8,11 +8,11 @@ spec:
   resourceLimits:
     maxNodesTotal: 24
     cores:
-      min: 8
-      max: 128
+      min: {{ cluster_autoscaler_cores_min | default(8) }}
+      max: {{ cluster_autoscaler_cores_max | default(128) }}
     memory:
-      min: 4
-      max: 256
+      min: {{ cluster_autoscaler_memory_min | default(4) }}
+      max: {{ cluster_autoscaler_memory_max | default(256) }}
   scaleDown:
     enabled: true
     delayAfterAdd: 30m

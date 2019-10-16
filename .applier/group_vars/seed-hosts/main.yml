@@ -27,7 +27,7 @@ openshift_cluster_content:
     post_steps:
     - role: self/roles/openshift_machine_api
   - name: Cluster Autoscaler
-    file: "{{ inventory_dir }}/../manifests/clusterautoscaler.yaml"
+    file: "{{ inventory_dir }}/../templates/clusterautoscaler.j2"
 - object: Scheduler
   content:
   - name: Cluster Autoscaler
